@@ -24,7 +24,7 @@
 
 
 /**
-* sls_format
+ * sls_format
  */
 std::string sls_format(const char *pszFmt, ...)
 {
