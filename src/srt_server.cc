@@ -54,9 +54,9 @@ int main(int argc, char* argv[])
     struct sigaction    sigHupHandler;
     sls_opt_t           sls_opt;
 
-    CSLSManager             *sls_manager = NULL;
-    std:list <CSLSManager*>  reload_manager_list;
-    CHttpClient             *http_stat_client = new CHttpClient;
+    CSLSManager               *sls_manager = NULL;
+    std::list <CSLSManager*>  reload_manager_list;
+    CHttpClient               *http_stat_client = new CHttpClient;
 
     int ret = SLS_OK;
     int l = sizeof(sockaddr_in);
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     memset(&sls_opt, 0, sizeof(sls_opt));
     if (argc > 1) {
         //parset argv
-    	int cmd_size = sizeof(conf_cmd_opt)/sizeof(sls_conf_cmd_t);
+        int cmd_size = sizeof(conf_cmd_opt) / sizeof(sls_conf_cmd_t);
         ret = sls_parse_argv(argc, argv, &sls_opt, conf_cmd_opt, cmd_size);
         if (ret!= SLS_OK) {
             CSLSLog::destory_instance();
@@ -166,7 +166,7 @@ int main(int argc, char* argv[])
 			tm = tm_cur;
 			printf("\n\n\n\n");
 		}
-		//*/
+		// */
 
 		//check reloaded manager
 		int reload_managers = reload_manager_list.size();
