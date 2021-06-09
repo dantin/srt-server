@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln -s /usr/local/lib/libsrt.so.1.4.3 /usr/local/lib/libsrt.so.1.4
+ln -s /usr/local/lib/libsrt.so.1.4   /usr/local/lib/libsrt.so

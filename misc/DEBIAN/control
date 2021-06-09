@@ -1,0 +1,7 @@
+Package: srt-server
+Version: 1.4.3-1
+Architecture: amd64
+Depends: libssl1.1, zlib1g
+Maintainer: David Ding <chengjie.ding@gmail.com>
+Description: srt-server
+ Backend service for SRT Dispatcher Service.
