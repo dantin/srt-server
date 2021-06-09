@@ -33,3 +33,5 @@
 
 build/*
 !build/.gitkeep
+
+tmp/*

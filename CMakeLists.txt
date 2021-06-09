@@ -15,7 +15,7 @@ find_package(Threads REQUIRED)
 find_package(SRT REQUIRED)
 include_directories(${SRT_SERVER_SOURCE_DIR} ${LIBSRT_INCLUDE_DIRS} ${ZLIB_INCLUDE_DIRS})
 
-add_executable(srt_server
+add_executable(srt-server
     src/srt_server.cc
     src/common.cc
     src/conf.cc
@@ -47,7 +47,7 @@ add_executable(srt_server
     src/TCPRole.cc
     src/TSFileTimeReader.cc)
 string(STRIP ${LIBSRT_LIBRARIES} LIBSRT_LIBRARIES)
-target_link_libraries(srt_server ${CMAKE_THREAD_LIBS_INIT} ${LIBSRT_LIBRARIES} ${ZLIB_LIBRARIES})
+target_link_libraries(srt-server ${CMAKE_THREAD_LIBS_INIT} ${LIBSRT_LIBRARIES} ${ZLIB_LIBRARIES})
 
 add_custom_target(dist
   COMMAND tar -czvf ${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.gz
@@ -56,7 +56,7 @@ add_custom_target(dist
     --exclude='.git'
     -C ${CMAKE_SOURCE_DIR} .)
 
-INSTALL(TARGETS srt_server
+INSTALL(TARGETS srt-server
     RUNTIME DESTINATION bin
 )
 
@@ -64,7 +64,7 @@ OPTION(RUN_CPPCHECK "Run cppcheck" OFF)
 
 IF(RUN_CPPCHECK)
     include(CppcheckTargets)
-    add_cppcheck(srt_server)
+    add_cppcheck(srt-server)
 ENDIF(RUN_CPPCHECK)
 
 message(STATUS "------------------------------")

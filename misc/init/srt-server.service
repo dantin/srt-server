@@ -1,0 +1,10 @@
+[Unit]
+Description=SRT Server
+After=syslog.target network.target
+
+[Service]
+User=david
+ExecStart=/home/devops/scripts/run_srt_server.sh
+
+[Install]
+WantedBy=multi-user.target
