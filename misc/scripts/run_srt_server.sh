@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-DEPLOY_DIR=/home/devops/srt-server
+DEPLOY_DIR=/home/devops/Documents/deploy/srt-server
 
 cd "${DEPLOY_DIR}"
 
-exec LD_LIBRARY_PATH=/usr/local/lib srt-server \
-     -config=/usr/local/etc/srt-server.cfg
+exec srt-server \
+     -c /usr/local/etc/srt-server.cfg
